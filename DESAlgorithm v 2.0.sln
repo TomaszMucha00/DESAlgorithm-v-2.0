@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DESAlgorithm v 2.0", "DESAlgorithm v 2.0\DESAlgorithm v 2.0.csproj", "{193BC1D1-94DF-4F98-9BD2-F6266347F9CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DESAlgorithmTest", "DESAlgorithmTest\DESAlgorithmTest.csproj", "{AA8AE2C7-92C7-4F08-B780-82B853CB5546}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{193BC1D1-94DF-4F98-9BD2-F6266347F9CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{193BC1D1-94DF-4F98-9BD2-F6266347F9CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{193BC1D1-94DF-4F98-9BD2-F6266347F9CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA8AE2C7-92C7-4F08-B780-82B853CB5546}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA8AE2C7-92C7-4F08-B780-82B853CB5546}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA8AE2C7-92C7-4F08-B780-82B853CB5546}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA8AE2C7-92C7-4F08-B780-82B853CB5546}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
