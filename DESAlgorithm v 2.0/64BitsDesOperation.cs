@@ -29,6 +29,7 @@ namespace DESAlgorithm_v_2._0
 
         public static BitArray DES64BitsEncription(BitArray DES64BitsBitArray, BitArray[] keys)
         {
+            PrintTables.PrintBitArrayTable(DES64BitsBitArray);
             DES64BitsBitArray = PermutationOperation.Permutate(DES64BitsBitArray, InitialPermutation);
             BitArray[] LeftSidePart = PartInit(new BitArray[16]);
             BitArray[] RightSidePart = PartInit(new BitArray[16]);
@@ -37,6 +38,9 @@ namespace DESAlgorithm_v_2._0
             EncriptingCycle1To16(ref LeftSidePart, ref RightSidePart);
             ReplaceLastElement(ref LeftSidePart, ref RightSidePart);
             DES64BitsBitArray = JoinLeftRightPart(LeftSidePart[15], RightSidePart[15]);
+            //Takie samo
+            Console.WriteLine("DES64BitsEncription");
+            PrintTables.PrintBitArrayTable(DES64BitsBitArray);
             DES64BitsBitArray = PermutationOperation.Permutate(DES64BitsBitArray, FinalPermutation);
             return DES64BitsBitArray;
         }

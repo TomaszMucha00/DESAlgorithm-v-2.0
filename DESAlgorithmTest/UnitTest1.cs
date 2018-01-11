@@ -1,15 +1,16 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections;
 
 namespace DESAlgorithmTest
 {
     [TestClass]
-    public class UnitTest1
+    public class DESTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void IsDevineCorrect()
         {
-
+            //BitArray testingObject[]
         }
     }
 }

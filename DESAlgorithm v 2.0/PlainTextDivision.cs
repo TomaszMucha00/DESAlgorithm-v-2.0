@@ -11,11 +11,7 @@ namespace DESAlgorithm_v_2._0
     {
         public static BitArray[] Divise(BitArray plainTextBitArray, BitArray[] plainText64BitFragments)
         {
-            foreach (var item in plainTextBitArray.Cast<bool>().ToArray())
-            {
-                Console.WriteLine(item);
-            }
-            plainText64BitFragments[0] = new BitArray(plainTextBitArray.Cast<bool>().ToArray());/*.ToArray().Take(20).ToArray());*/
+            plainText64BitFragments[0] = new BitArray(plainTextBitArray.Cast<bool>().ToArray().Take(64).ToArray());
             for (int i = 1; i < plainTextBitArray.Length/64; i++)
             {
                 plainText64BitFragments[i]=new BitArray(plainTextBitArray.Cast<bool>().ToArray().Take((i+1)*64).Skip(i*64).ToArray());

@@ -12,9 +12,15 @@ namespace DESAlgorithm_v_2._0
         public static string ConvertBitArrayToString(BitArray toConvert)
         {
             string toReturn = "";
+            int counter = 0;
             foreach (var BitArrayElement in toConvert)
             {
+                if (counter%64==0&&counter!=0)
+                {
+                    toReturn += "\n";
+                }
                 toReturn += Convert.ToInt32(BitArrayElement).ToString();
+                counter++;
             }
             return toReturn;
         }

@@ -19,7 +19,7 @@ namespace DESAlgorithm_v_2._0
             plainTextBitArray = PlainTextStandardisation.BitArrayStandardisation(plainTextBitArray);
             keyBitArray = ConverterStringToByteTable.StringToByteTable(key);
             keyBitArray = KeyStandardisation.BitArrayStandardisation(keyBitArray);
-            plainText64BitFragments = new BitArray[keyBitArray.Length/64];
+            plainText64BitFragments = new BitArray[plainTextBitArray.Length/64];
         }
 
         public string Encript()
@@ -37,6 +37,7 @@ namespace DESAlgorithm_v_2._0
             {
                 plainText64BitFragments[i] = _64BitsDesOperation.DES64BitsEncription(plainText64BitFragments[i], Keys.Subkeys);
             }
+            PrintTables.PrintTableOfBitArray(plainText64BitFragments);
             return plainText64BitFragments;
         }
 
