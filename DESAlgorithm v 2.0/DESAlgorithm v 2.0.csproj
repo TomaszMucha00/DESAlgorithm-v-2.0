@@ -48,26 +48,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="64BitsDesOperation.cs" />
-    <Compile Include="BitArrayToStringConverter.cs" />
-    <Compile Include="ConverterStringToByteTable.cs" />
-    <Compile Include="DESMain.cs" />
-    <Compile Include="FeistelFunction.cs" />
-    <Compile Include="Keys.cs" />
-    <Compile Include="KeyStandardisation.cs" />
-    <Compile Include="PermutationOperation.cs" />
-    <Compile Include="PlainTextDivision.cs" />
-    <Compile Include="PlainTextJoin.cs" />
-    <Compile Include="PlainTextStandardisation.cs" />
+    <Compile Include="Converters\BitArrayToString.cs" />
+    <Compile Include="DES.cs" />
+    <Compile Include="MathUtil.cs" />
+    <Compile Include="KeysOperations.cs" />
+    <Compile Include="PlainTextOperation.cs" />
     <Compile Include="PrintTables.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sbox.cs" />
-    <Compile Include="ShiftTableElement.cs" />
+    <Compile Include="BitArrayOperations.cs" />
+    <Compile Include="Converters\StringToBitArray.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -9,7 +9,7 @@ namespace DESAlgorithm_v_2._0
 {
     internal class PrintTables
     {
-        public static void PrintTable(int[] toPrint)
+        public static void PrintTable(byte[] toPrint)
         {
             string stringToPrint = "";
             foreach (var item in toPrint)
@@ -29,7 +29,7 @@ namespace DESAlgorithm_v_2._0
             Console.WriteLine(stringToPrint);
         }
 
-        public static void PrintTableOfTables(int[][] toPrint)
+        public static void PrintTableOfTables(byte[][] toPrint)
         {
             string stringToPrint = "";
             int counter = 1;
@@ -61,6 +61,19 @@ namespace DESAlgorithm_v_2._0
                 stringToPrint += "\n \n";
             }
             Console.WriteLine(stringToPrint);
+        }
+
+        public static void PrintTableBitArrayIntForm(BitArray toPrint)
+        {
+            Console.WriteLine(BitArrayToString.Convert(toPrint)); 
+        }
+
+        public static void PrintTableOfBitArrayIntForm(BitArray[] toPrint)
+        {
+            foreach (var item in toPrint)
+            {
+                Console.WriteLine(BitArrayToString.Convert(item) + "\n");
+            }
         }
     }
 }

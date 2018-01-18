@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace DESAlgorithm_v_2._0
 {
-    internal class ConverterStringToByteTable
+    internal static class StringToBitArray
     {
-        public static BitArray StringToByteTable(string plainTextString)
+        public static BitArray Convert(string plainTextString)
         {
             byte[] plainTextByteArray = Encoding.UTF8.GetBytes(plainTextString);
-            BitArray PlainTextBitArray = new BitArray(plainTextByteArray);
+            BitArray PlainTextBitArray = BitArrayOperation.ReverseBitArrayInit(plainTextByteArray);
             return PlainTextBitArray;
         }
     }

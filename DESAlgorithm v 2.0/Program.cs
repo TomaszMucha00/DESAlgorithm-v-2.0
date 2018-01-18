@@ -10,7 +10,7 @@ namespace DESAlgorithm_v_2._0
     {
         static void Main(string[] args)
         {
-            DESMain Des = new DESMain("NEVRQUIT", "KASHISAB");
+            DES Des = new DES("TO JEST BARDZO TAJNY KOT", "KOD");
             Console.WriteLine("Encripted message: \n \n" + Des.Encript());
         }
     }
