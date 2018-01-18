@@ -21,7 +21,6 @@ namespace DESAlgorithm_v_2._0
                                                28,  29,  30,  31,  32,   1 };
             toProcess = MathUtil.BitArrayPermutate(toProcess, expansionMatrix);
             toProcess.Xor(subkeys[withKeyCykle-1]);
-            BitArray temp = new BitArray(subkeys[withKeyCykle-1]);
             toProcess = Sbox.SBoxSubstitution(toProcess);
             byte[] permutation = new byte[]  {16,   7,  20,  21,  29,  12,  28,  17,
                                                 1 ,  15,  23,  26,  5 ,  18,  31,  10,

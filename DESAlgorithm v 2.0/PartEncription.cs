@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DESAlgorithm_v_2._0
 {
-    internal static class _64BitsDesOperation
+    internal static class PartEncription
     {
         public static BitArray DES64BitsEncription(BitArray DES64BitsBitArray, BitArray[] keys)
         {
@@ -24,8 +24,6 @@ namespace DESAlgorithm_v_2._0
             BitArray[] RightSidePart = PartInit(new BitArray[17]);
             LeftSidePart[0] = FirstLeftElementInit(LeftSidePart[0], DES64BitsBitArray);
             RightSidePart[0] = FirstRightElementInit(RightSidePart[0], DES64BitsBitArray);
-            BitArray temp1 = LeftSidePart[0];
-            BitArray temp2 = RightSidePart[0];
             EncriptingCycle1To16(ref RightSidePart, ref LeftSidePart, keys);
             ReplaceLastElement(ref LeftSidePart, ref RightSidePart);
             DES64BitsBitArray = JoinLeftRightPart(LeftSidePart[16], RightSidePart[16]);
@@ -72,11 +70,7 @@ namespace DESAlgorithm_v_2._0
         {
             for (int i = 1; i < 17; i++)
             {
-                // LeftSidePart[i] = MathUtil.FeistelFunction(RightSidePart[i - 1], i, keys);
-                // RightSidePart[i] = LeftSidePart[i - 1].Xor(LeftSidePart[i]);
                 LeftSidePart[i] = RightSidePart[i - 1];
-                BitArray temp1 = new BitArray(LeftSidePart[i]);
-                BitArray temp2 = new BitArray(RightSidePart[i-1]);
                 RightSidePart[i] = LeftSidePart[i - 1].Xor(MathUtil.FeistelFunction(RightSidePart[i-1],i,keys));
             }
         }
